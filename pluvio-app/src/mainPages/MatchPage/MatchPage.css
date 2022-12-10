@@ -1,0 +1,19 @@
+.matchDeck{
+    display: flex;
+    flex-direction: column;
+}
+
+
+.buttonContainer{
+    display: flex;
+    justify-content: center;
+    margin-top: 90px; 
+}
+
+.circle
+{
+    background-color: #4930FF;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}
