@@ -52,7 +52,7 @@ const NavigationBar = () => {
 
   const user = useSelector(selectUser);
 
-  const linkArray = ["/home/","/profile/"+(user?user.name:""),"/friends/","/match/","/movies",]
+  const linkArray = ["/home/","/profile/"+(user?user.name:""),"/friends/","/movies",]
 
   if (!user) {
     return <div></div>
@@ -71,7 +71,7 @@ const NavigationBar = () => {
               padding: 1
             }} 
           >Menu</Typography>
-          {["Home", "Profile", "Friends", "Match","Movies",].map((text, index) => (
+          {["Home", "Profile", "Friends","Movies",].map((text, index) => (
             <ListItem key={text} disablePadding>
               <NavLink to={linkArray[index]} 
                 onClick={onClickHandler(text)}
