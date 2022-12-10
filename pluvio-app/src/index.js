@@ -7,7 +7,7 @@ import "@fontsource/poppins";
 import HomePage from './mainPages/HomePage/HomePage';
 import { BrowserRouter,Routes, Route, useLocation } from 'react-router-dom';
 import FriendsPage from './mainPages/FriendsPage/FriendsPage';
-import MatchPage from './mainPages/MatchPage/MatchPage';
+// import MatchPage from './mainPages/MatchPage/MatchPage';
 import ProfilePage from './mainPages/ProfilePage/ProfilePage';
 import WelcomePage from './mainPages/WelcomePage/WelcomePage';
 import SettingsPage from './mainPages/SettingsPage/SettingsPage';
@@ -60,7 +60,7 @@ const App = () => {
           <Route path="/welcome" element = {<WelcomePage/>}/>
           <Route path="/friends/" element = {<Protected><FriendsPage/></Protected>}/>
           <Route path="/profile/:handle" element = {<Protected><ProfilePage/></Protected>}/>
-          <Route path="/match/" element = {<Protected><MatchPage/></Protected>}/>
+          {/* <Route path="/match/" element = {<Protected><MatchPage/></Protected>}/> */}
           <Route path="/movies/" element = {<Protected><MoviesPage/></Protected>}/>
           <Route path="/settings/" element = {<Protected><SettingsPage/></Protected>}/>
           <Route path ="*" element = {<PageNotFound/>}/>
