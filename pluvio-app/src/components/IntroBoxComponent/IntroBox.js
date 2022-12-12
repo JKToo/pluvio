@@ -20,11 +20,11 @@ const IntroBox = () => {
       <Card style={{position: "relative"}}>
         <Title>Find your perfect movie</Title>
         <p style={{fontWeight: 900}}>
-          We’re constantly updating your recommendations based on your responses
-          and watchlist. Look for what you’re most interested in and we can find
+          We’re constantly updating our database with movies based on the Movie Database API. 
+          Look for what you’re most interested in and we can find
           the best movie for you!
         </p>
-        <NavLink style={{textDecoration: "None"}} to="/match"><ButtonComponent>Match Me</ButtonComponent></NavLink>
+        <NavLink style={{textDecoration: "None"}} to="/movies"><ButtonComponent>SEARCH</ButtonComponent></NavLink>
         <img src={balls} alt="" 
         style={{position: "absolute", bottom: "-50px", right: "5%"}}
 />

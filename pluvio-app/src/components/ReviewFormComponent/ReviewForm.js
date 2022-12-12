@@ -136,7 +136,7 @@ export default function ReviewForm({title, image, id}) {
     return (
         <div>
         <Button onClick={handleOpen}>
-          <div className="circle"><CreateIcon sx={{ fontSize: 55 ,paddingTop:1}}/></div>
+          <div className="circle"><CreateIcon sx={{ fontSize: 40 ,paddingTop:1}}/></div>
         </Button>
         <Modal
           open={open}
