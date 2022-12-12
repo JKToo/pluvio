@@ -59,6 +59,7 @@ export default function ProfileBox({userdata}) {
     const [color, setColor] = useState(userdata.color);
     const [followers, setFollowers] = useState(0)
     const [reviews, setReviews] = useState(0)
+    const [friends, setFriends] = useState(0)
     const handleOpen = () => setOpen(true);
     const handleClose = () => setOpen(false);
     const dispatch = useDispatch();
@@ -161,6 +162,11 @@ export default function ProfileBox({userdata}) {
         .then( response => {
           setReviews(response.data.length);
         })
+        axios
+        .get('http://localhost:5001/users/friendsid/'+user.name)
+        .then( response => {
+          setFriends(response.data.length);
+        })
       }, []);
 
     return (
@@ -189,7 +195,7 @@ export default function ProfileBox({userdata}) {
                     </div>
             </div>
             <div className="bottom">
-                <div><p>Following</p> <p>{userdata ? userdata.following : "0"}</p></div>
+                <div><p>Following</p> <p>{userdata ? friends : "0"}</p></div>
                 <div><p>Follower</p> <p>{userdata ? followers : "0"}</p></div>
                 <div><p>Reviews</p> <p>{userdata ? reviews : "0"}</p></div>
             </div>
