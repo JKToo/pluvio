@@ -57,6 +57,8 @@ export default function ProfileBox({userdata}) {
     const [open, setOpen] = React.useState(false);
     const [picker, setPicker] = useState(false);
     const [color, setColor] = useState(userdata.color);
+    const [followers, setFollowers] = useState(0)
+    const [reviews, setReviews] = useState(0)
     const handleOpen = () => setOpen(true);
     const handleClose = () => setOpen(false);
     const dispatch = useDispatch();
@@ -121,6 +123,8 @@ export default function ProfileBox({userdata}) {
           console.log(color);
           console.log(user);
         });
+
+        
       }
 
       useEffect(() => {
@@ -137,6 +141,26 @@ export default function ProfileBox({userdata}) {
           .then((response) => {
             setColor(response.data);
           });
+
+          const configurationfollowers = {
+            method: "get",
+            url: "http://localhost:5001/users/followers/" + user.name,
+          };
+          axios(configurationfollowers).then((response) => {
+            // for(let i = 0; i < response.data.length; i++){
+            //   // console.log("Setting follower: " + response.data[i].name)
+            //   // det.push(response.data[i].name)
+            //   console.log("Followers: " + response.data[i].name)
+            // console.log(response.data[i])
+            console.log("DATA: " + response.data.length)
+            setFollowers(response.data.length)
+            // }
+          });
+          axios
+        .get('http://localhost:5001/reviews/user/'+user.name)
+        .then( response => {
+          setReviews(response.data.length);
+        })
       }, []);
 
     return (
@@ -166,8 +190,8 @@ export default function ProfileBox({userdata}) {
             </div>
             <div className="bottom">
                 <div><p>Following</p> <p>{userdata ? userdata.following : "0"}</p></div>
-                <div><p>Follower</p> <p>{userdata ? userdata.followers : "0"}</p></div>
-                <div><p>Review</p> <p>{userdata ? userdata.reviews : "0"}</p></div>
+                <div><p>Follower</p> <p>{userdata ? followers : "0"}</p></div>
+                <div><p>Reviews</p> <p>{userdata ? reviews : "0"}</p></div>
             </div>
       </Card>
 
