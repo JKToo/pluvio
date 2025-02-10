@@ -1,0 +1,47 @@
+.changeUser
+{
+    display: flex;
+    gap: 20px;
+    width: auto;
+}
+
+.changeUser>*
+{
+    width: 100%;
+}
+
+.passwordBottomArea
+{
+    display: flex;
+    gap: 20px;
+    width: auto;
+}
+
+.passwordBottomArea>*
+{
+    width: 100%;
+}
+
+#light
+{
+    background-color: skyblue;
+}
+
+#dark
+{
+    background-color: #0b0725;
+}
+
+#light .buttonswitch{
+    background-color: aqua;
+}
+
+/*body  
+{
+    background-color: white;
+}
+
+#navContainer
+{
+    background-color: skyblue;
+}*/
