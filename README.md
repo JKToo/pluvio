@@ -14,5 +14,7 @@ Pluvio is a social media platform developed using the MERN stack that allows use
 - 🎨 **User-friendly interface**
 
 ### 🖼️ Screenshots:
-
-
+<img src="\screenshot\login.png">
+<img src="\screenshot\feed.png">
+<img src="\screenshot\post.png">
+<img src="\screenshot\ai.png">
