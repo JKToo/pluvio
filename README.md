@@ -20,4 +20,4 @@ Pluvio is a social media platform developed using the MERN stack that allows use
 <img src="\screenshot\ai.png">
 
 
-### To see the original repo with all the commits & branches, find it [here](https://github.com/JKToo/pluvio)
+### To see the original repo with all the commits & branches, find it [here](https://github.com/JKToo/pluvio-)
