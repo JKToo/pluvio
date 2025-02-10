@@ -1,6 +1,6 @@
 
-## Project: Pluvio <img src="pluvio-app\src\mainPages\WelcomePage\pluvioLogo.png" height=50>
-## Group Project
+## Group Project: Pluvio <img src="pluvio-app\src\mainPages\WelcomePage\pluvioLogo.png" height=50>
+
 
 ###  What is Pluvio?
 
